@@ -19,6 +19,18 @@ class WaterCupsController < ApplicationController
         render json: user 
     end 
 
+    def update
+        watercup = WaterCup.find_by(id: params[:id])
+        watercup.update(amount: params["amount"])
+        render json: watercup
+    end
+
+    def destroy
+        watercup = WaterCup.find_by(id: params[:id])
+        watercup.delete
+        render json: watercup
+    end 
+
 end
 
 def watercup_params
