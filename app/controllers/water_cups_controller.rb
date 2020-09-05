@@ -1,6 +1,6 @@
 class WaterCupsController < ApplicationController
     def index 
-        watercup = WaterCup.all 
+        watercups = WaterCup.all 
         render json: watercups
     end 
 
