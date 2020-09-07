@@ -16,7 +16,7 @@ class WaterCupsController < ApplicationController
     def create 
         watercup = WaterCup.new(watercup_params)
         watercup.save 
-        render json: user 
+        render json: watercup 
     end 
 
     def update
