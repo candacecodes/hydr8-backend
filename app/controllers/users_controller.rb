@@ -18,6 +18,12 @@ class UsersController < ApplicationController
         user.save 
         render json: user 
     end 
+
+    def update
+        user = User.find_by(id: params[:id])
+        user.update(name: params["name"], age: params["age"], gender: params["gender"], watergoal: params["watergoal"])
+        render json: user
+    end
 end
 
 private
