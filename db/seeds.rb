@@ -18,5 +18,7 @@
 
   water1 = WaterCup.create(amount: "2", user_id: 1)
   water2 = WaterCup.create(amount: "1", user_id: 1)
+  water3 = WaterCup.create(amount: "1", user_id: 1)
+  water4 = WaterCup.create(amount: "1", user_id: 1)
 
   puts 'seeds done'

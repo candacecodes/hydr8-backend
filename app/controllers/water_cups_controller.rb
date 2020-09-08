@@ -14,7 +14,7 @@ class WaterCupsController < ApplicationController
     end 
 
     def create 
-        watercup = WaterCup.new(watercup_params)
+        watercup = WaterCup.new(amount: params["amount"], user_id: params["user_id"])
         watercup.save 
         render json: watercup 
     end 
@@ -34,5 +34,5 @@ class WaterCupsController < ApplicationController
 end
 
 def watercup_params
-    params.require(:watercup).permit(:amount)
+    params.require(:watercup).permit(:amount,)
 end
